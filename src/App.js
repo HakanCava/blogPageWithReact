@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { ToastContainer } from "react-toastify";
+import AppRouter from "./router/AppRouter";
+import { Provider } from "react-redux";
+import store, { persistor } from "./app/store";
+import { PersistGate } from "redux-persist/integration/react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { indigo } from "@mui/material/colors";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: indigo[900],
+      },
+      secondary: {
+        main: indigo[500],
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        {" "}
+       
+        <PersistGate loading={null} persistor={persistor}>
+          <AppRouter />
+        </PersistGate>{" "}
+
+        <ToastContainer />
+      </Provider>
+    </ThemeProvider>
   );
 }
 
