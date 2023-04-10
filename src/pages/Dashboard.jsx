@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import  Grid  from '@mui/material/Grid'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import useBlogCall from '../hooks/useBlogCall'

@@ -11,7 +11,6 @@ import {logoutBlogSuccess} from "../features/blogSlice"
 import useAxios from "./useAxios";
 import { toastSuccessNotify,toastErrorNotify } from "../helpers/ToastNotify";
 
-// const {data}=await axiosWithToken.post(`account/`)
 
 const useAuthCall = () => {
   const dispatch = useDispatch();

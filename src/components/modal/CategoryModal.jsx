@@ -3,16 +3,10 @@ import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { LoadingButton } from "@mui/lab";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
+import { LoadingButton } from "@mui/lab"
 import TextField from "@mui/material/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import FormControl from "@mui/material/FormControl";
 import { useSelector } from "react-redux";
-import { Paper } from "@mui/material";
+import  Paper  from "@mui/material/Paper";
 import useBlogCall from "../../hooks/useBlogCall";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -29,11 +23,12 @@ const style = {
   p: 4,
 };
 
-const CategoryModal = ({ open, handleClose,  }) => {
+const CategoryModal = ({ open, handleClose }) => {
+
   const { loading } = useSelector((state) => state.auth);
 
   const { getBlogData } = useBlogCall();
-  const { currentUserID, currentUser } = useSelector((state) => state.auth);
+  
   const [category,setCategory]=useState({
     name:""
   })

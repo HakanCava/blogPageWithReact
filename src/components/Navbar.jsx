@@ -44,7 +44,7 @@ function NavBar() {
     setAnchorElUser(null);
   };
 
-  // console.log(currentUser);
+
   return (
     <AppBar position="static" sx={{bgcolor:theme.palette.primary.main,mb:2,}}>
       <Container maxWidth="xl">

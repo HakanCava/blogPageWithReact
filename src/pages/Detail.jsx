@@ -1,15 +1,13 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
-import React, { useEffect } from "react";
+import CardMedia from "@mui/material/CardMedia";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useBlogCall from "../hooks/useBlogCall";
 import { useSelector } from "react-redux";
@@ -43,7 +41,7 @@ const Detail = () => {
 
   const [show, setShow] = useState(false);
 
-  const { postLikeComment, postComment, deleteBlogCategory } = useBlogCall();
+  const { postLikeComment, deleteBlogCategory } = useBlogCall();
 
   const handleLike = () => {
     postLikeComment("likes", id, "like", currentUserID);
@@ -54,7 +52,7 @@ const Detail = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment("comments", id, "comment", currentUserID, comment);
+    postLikeComment("comments", id, "comment", currentUserID, comment);
 
     setComment({
       content: "",
@@ -87,7 +85,7 @@ const Detail = () => {
 
   const userID = blog?.likes_n.filter((item) => item.user_id === currentUserID);
 
-  console.log(blog);
+ 
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center", mb: 20 }}>
@@ -98,7 +96,6 @@ const Detail = () => {
           justifyContent: "center",
           flexDirection: "column",
           gap: 2,
-       
         }}
       >
         <Paper
@@ -144,7 +141,7 @@ const Detail = () => {
           </CardContent>
 
           <CardActions
-            sx={{ display: "flex", justifyContent: "space-between", }}
+            sx={{ display: "flex", justifyContent: "space-between" }}
           >
             <Box>
               <Button
@@ -194,9 +191,9 @@ const Detail = () => {
                 "&:hover": { bgcolor: "#76ff03" },
                 fontSize: "1.2rem",
               }}
-              onClick={()=>{
-                handleOpen()
-              setInfo(blog)
+              onClick={() => {
+                handleOpen();
+                setInfo(blog);
               }}
             >
               <GrUpdate sx={{ fontSize: "1.3rem" }} />

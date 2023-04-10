@@ -1,5 +1,8 @@
-import { Box, Button, ButtonGroup, Grid, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import Typography  from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import useBlogCall from "../hooks/useBlogCall";
 import BlogCard from "../components/blog/BlogCard";
@@ -15,13 +18,12 @@ const MyBlog = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
  
-  console.log(currentUserID);
-  console.log(currentUser);
+
   const { getBlogUniqData } = useBlogCall();
   useEffect(() => {
     getBlogUniqData("blogs", `?author=${currentUserID}`, "userBlogs");
   }, []);
-  console.log(userBlogs);
+  
   return (
     <Box>
       <Box sx={{ textAlign: "center",p:2,bgcolor:"antiquewhite" }}>

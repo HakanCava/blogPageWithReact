@@ -1,14 +1,12 @@
-import { Box, Paper } from '@mui/material'
+import  Paper  from '@mui/material/Paper'
+import Box  from '@mui/material/Box'
 import React from 'react'
 import logo from "../assets/myAvatar.png"
-import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import  {IoLogoLinkedin} from "react-icons/io";
 import  {BsGithub} from "react-icons/bs";
 
