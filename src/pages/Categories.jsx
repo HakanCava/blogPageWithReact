@@ -12,8 +12,9 @@ import { grey } from "@mui/material/colors";
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
 import { useState } from "react";
-
 import CategoryUpdateModal from "../components/modal/CategoryUpdateModal";
+import { Helmet } from "react-helmet";
+
 const Categories = () => {
     const { currentUser } = useSelector((state) => state.auth);
   const { categories } = useSelector((state) => state.blog);
@@ -41,6 +42,9 @@ const Categories = () => {
 
   return (
     <Box sx={{display:"flex",alignItems:"center",flexDirection:"column",mb:10}}>
+       <Helmet>
+        <title>Categories</title>
+      </Helmet>
         <Box sx={{maxWidth:500,bgcolor:"antiquewhite",p:5}}>
             <Typography sx={{fontSize:"1.2rem",fontWeight:600}}><span style={{fontSize:"1.3rem",fontWeight:900,color:"red",display:"block"}}>Hello {currentUser.toUpperCase()}. </span>You can see the categories below before create a new blog. However,if you don't find category for your blog ,you can create a new category at your personel blog page. Keep writing...</Typography>
         </Box>

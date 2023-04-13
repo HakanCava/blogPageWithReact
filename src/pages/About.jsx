@@ -9,10 +9,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import  {IoLogoLinkedin} from "react-icons/io";
 import  {BsGithub} from "react-icons/bs";
+import { Helmet } from 'react-helmet'
 
 export default function About() {
   return (
     <Box sx={{display:"flex",justifyContent:"center"}}>
+       <Helmet>
+        <title>About</title>
+      </Helmet>
     <Paper elevation={24} sx={{ maxWidth: 445,borderRadius:"20px" ,textAlign:"center"}}>
       <CardMedia
         sx={{ maxHeight: 350 }}

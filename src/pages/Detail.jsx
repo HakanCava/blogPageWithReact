@@ -23,6 +23,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { GrUpdate } from "react-icons/gr";
 import CommentCard from "../components/blog/CommentCard";
 import BlogModal from "../components/modal/BlogModal";
+import { Helmet } from "react-helmet";
 
 const Detail = () => {
   const { blog } = useSelector((state) => state.blog);
@@ -89,6 +90,9 @@ const Detail = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center", mb: 20 }}>
+       <Helmet>
+        <title>{blog?.title}</title>
+      </Helmet>
       <Box ref={scrollTop}></Box>
       <Box
         sx={{

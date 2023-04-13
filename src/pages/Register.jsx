@@ -7,7 +7,7 @@ import { Formik } from "formik";
 import { registerSheme } from "../components/auth/RegisterForm";
 import useAuthCall from "../hooks/useAuthCall";
 import RegisterForm from "../components/auth/RegisterForm";
-
+import { Helmet } from "react-helmet";
 
 
 const SignUp = () => {
@@ -16,6 +16,9 @@ const SignUp = () => {
   return (
     
       <Container component="main" maxWidth="xs">
+         <Helmet>
+        <title>Register</title>
+      </Helmet>
         <Box
           sx={{
             marginTop: 8,

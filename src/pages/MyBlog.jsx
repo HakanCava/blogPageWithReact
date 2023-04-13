@@ -9,6 +9,7 @@ import BlogCard from "../components/blog/BlogCard";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import CategoryModal from "../components/modal/CategoryModal";
+import { Helmet } from "react-helmet";
 
 const MyBlog = () => {
   const { userBlogs } = useSelector((state) => state.blog);
@@ -26,6 +27,9 @@ const MyBlog = () => {
   
   return (
     <Box>
+       <Helmet>
+        <title>MyBlog</title>
+      </Helmet>
       <Box sx={{ textAlign: "center",p:2,bgcolor:"antiquewhite" }}>
         <Typography variant="h5">Hi {currentUser.toUpperCase()}</Typography>
       

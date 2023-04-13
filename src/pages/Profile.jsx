@@ -7,6 +7,7 @@ import Divider  from "@mui/material/Divider";
 import { grey } from "@mui/material/colors";
 import { useEffect } from "react";
 import useBlogCall from "../hooks/useBlogCall";
+import { Helmet } from "react-helmet";
 
 const Profile = () => {
 
@@ -20,6 +21,9 @@ useEffect(() => {
 
   return (
     <Box sx={{p:1,display:"flex",flexDirection:"column",alignItems:"center"}}>
+       <Helmet>
+        <title>Profile</title>
+      </Helmet>
 <Box sx={{textAlign:"center",bgcolor:"antiquewhite",p:3}}>
   <Typography>Your Profile</Typography>
   <Typography>User Name:<span style={{textDecoration:"underline",color:"red"}}>{currentUser.charAt(0).toUpperCase()}

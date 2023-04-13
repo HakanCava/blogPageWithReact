@@ -7,12 +7,16 @@ import { Formik } from "formik";
 import { loginSheme } from "../components/auth/LoginForm";
 import useAuthCall from "../hooks/useAuthCall";
 import LoginForm from "../components/auth/LoginForm";
+import { Helmet } from "react-helmet";
 
 const SignIn = () => {
   const { authOperation } = useAuthCall();
 
   return (
     <Container component="main" maxWidth="xs">
+       <Helmet>
+        <title>Login</title>
+      </Helmet>
       <Box
         sx={{
           marginTop: 8,

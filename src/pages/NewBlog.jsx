@@ -6,7 +6,7 @@ import { Formik } from "formik";
 import useBlogCall from "../hooks/useBlogCall";
 import NewBlogForm, {newBlogSheme } from "../components/blog/NewBlogForm";
 import { FaBlog } from "react-icons/fa";
-
+import { Helmet } from "react-helmet";
 
 const NewBlog = () => {
   const { postBlogData } = useBlogCall();
@@ -14,6 +14,9 @@ const NewBlog = () => {
   return (
     
       <Container component="main" maxWidth="xs" mb={10}>
+         <Helmet>
+        <title>NewBlog</title>
+      </Helmet>
         <Box
           sx={{
             marginTop: 8,
