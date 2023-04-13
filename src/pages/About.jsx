@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet'
 
 export default function About() {
   return (
-    <Box sx={{display:"flex",justifyContent:"center"}}>
+    <Box sx={{display:"flex",justifyContent:"center",mb:10}}>
        <Helmet>
         <title>About</title>
       </Helmet>
