@@ -26,9 +26,9 @@ yarn create react-app (folderName OR .)
 - `formik`
 - `yup`
 
-## `What are we doing`
+## `What am I doing`
 
-- In this project, we are making a blog application.
+- In this project, I am making a blog application.
 - Blog pages are an ideal platform to share personal thoughts, knowledge and expertise with others. You can interact with your readers by creating content about topics that interest you.
 - In this application, the user can write, update and even delete their own blog posts.
 - Crud operations are performed according to the swagger and redoc documents from the backend.
