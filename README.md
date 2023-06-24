@@ -1,4 +1,4 @@
-# Stock App Project
+# Blog App Project
 
 ## `Installation`
 
